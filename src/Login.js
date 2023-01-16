@@ -23,7 +23,8 @@ var generateRandomString = function (length) {
 };
 
 
-var scope = 'user-read-private user-read-email';
+var scope = 'user-read-private user-read-email user-library-read user-library-modify user-read-playback-state user-modify-playback-state';
+// var scope = 'user-read-private';
 var state = generateRandomString(16);
 const AUTH_URL = 'https://accounts.spotify.com/authorize?' +
     querystring.stringify({

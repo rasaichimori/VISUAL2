@@ -1,0 +1,10 @@
+:root {
+    --bg: rgb(193, 193, 193);
+}
+
+.menu-button {
+    background-color: var(--bg);
+    width: 100px;
+    border: solid green;
+    border-radius: 5px;
+}
