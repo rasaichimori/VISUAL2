@@ -4,7 +4,19 @@
 
 .menu-button {
     background-color: var(--bg);
+    height: 24px;
     width: 100px;
     border: solid green;
     border-radius: 5px;
+    transition: all 0.5s;
+    overflow-y: scroll;
+}
+
+.menu-button:hover {
+    height: 100px;
+}
+
+.menu-button svg {
+    height: 20px;
+    width: 20px;
 }
