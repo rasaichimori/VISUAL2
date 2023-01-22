@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react"
+import { CSSTransition } from 'react-transition-group'
 import useAuth from "./useAuth"
+import { ReactComponent as ChevronDown } from './icons/angle-down-solid.svg';
+
 import Player from "./Player"
 import TrackSearchResult from "./TrackSearchResult"
 import { Container, Form } from "react-bootstrap"
@@ -109,6 +112,7 @@ export default function Dashboard({ code }) {
                 <DropdownItem>shit</DropdownItem>
                 <DropdownItem>lazy sad</DropdownItem>
                 <DropdownItem>garbo</DropdownItem>
+                <DropdownItem>fuck</DropdownItem>
             </DropdownMenu>
 
 
@@ -146,11 +150,10 @@ export default function Dashboard({ code }) {
 }
 
 function DropdownMenu(props) {
-    const [open, setOpen] = useState(false);
     return (
-        <div className="menu-button" onClick={() => setOpen(!open)}>
-            <a>testing</a>
-            {open && props.children}
+        <div className="menu-button">
+            <a style={"position = sticky"}>testing{<ChevronDown />}</a>
+            {props.children}
         </div>
     )
 }
